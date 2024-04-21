@@ -20,7 +20,7 @@ libdft = lib.load_library('libdft')
 libcvhf = lib.load_library('libcvhf')
 
 def eval_rhoc(mol, ao, mo_coeff, mo_occ, non0tab=None, xctype='LDA', verbose=None):
-    assert ao.flags.c_contiguous
+    #assert ao.flags.c_contiguous
     xctype = xctype.upper()
     if xctype == 'LDA':
         ngrids, nao = ao.shape

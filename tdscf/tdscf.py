@@ -141,7 +141,8 @@ class tdscf:
         xctype = self.the_scf._numint._xc_type(self.the_scf.xc)
         make_rho, nset, nao = self._gen_rho_evaluator(self.mol, P, 1)
         ngrids = len(self.the_scf.grids.weights)
-        non0tab = self.the_scf._numint.non0tab
+        #non0tab = self.the_scf._numint.non0tab
+        non0tab = self.the_scf.grids.non0tab
         vmat = np.zeros((nset, nao, nao)).astype(complex)
         excsum = np.zeros(nset)
         if xctype == 'LDA':
